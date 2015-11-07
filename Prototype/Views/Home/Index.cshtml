@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Applicants</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td><p>Name</p></td>
+                    <td><p>Second name</p></td>
+                    <td><p>Patronymic</p></td>
+                    <td></td>
+                </tr>
+                @foreach (var b in ViewBag.Applicants)
+                {
+                    <tr>
+                       <td><p>@b.Name</p></td>
+                       <td><p>@b.SecondName</p></td>
+                       <td><p>@b.Patronymic</p></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>
